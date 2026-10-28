@@ -21,11 +21,11 @@
     "require": {
         "php": "^8.2",
         "ext-pdo": "*",
-        "ext-sodium": "*",
         "ext-json": "*",
         "nexus-lab/nexus": "^1.0 || ^2.0"
     },
     "suggest": {
+        "ext-sodium": "Recommended for native Libsodium cryptographic operations (XChaCha20-Poly1305)",
         "ext-pdo_mysql": "Required to connect to cPanel MySQL and MariaDB databases",
         "ext-openssl": "Fallback cryptographic engine when native sodium is restricted",
         "ext-mbstring": "Recommended for full Unicode and multibyte support",
