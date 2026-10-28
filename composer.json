@@ -1,10 +1,11 @@
 {
     "name": "nexus-lab/cpanel-installer",
-    "description": "Zero-SSH graphical web installer for NextPHP and Nexus applications on cPanel shared hosting.",
+    "description": "Zero-SSH graphical web installer for Nexus applications on cPanel shared hosting.",
     "type": "library",
     "license": "MIT",
     "keywords": [
-        "nextphp",
+        "nexus",
+        "nexus-lab",
         "cpanel",
         "installer",
         "zero-ssh",
@@ -13,7 +14,7 @@
     ],
     "authors": [
         {
-            "name": "NextPHP Architecture Team",
+            "name": "Nexus Architecture Team",
             "role": "Package Architect & Application Security"
         }
     ],
@@ -31,6 +32,7 @@
     },
     "autoload": {
         "psr-4": {
+            "Nexus\\Installer\\": "src/",
             "NextPHP\\Installer\\": "src/"
         }
     },

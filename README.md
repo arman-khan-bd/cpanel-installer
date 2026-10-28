@@ -1,6 +1,6 @@
-# NextPHP cPanel Installer (`nextphp/cpanel-installer`)
+# Nexus cPanel Installer (`nexus-lab/cpanel-installer`)
 
-> **Zero-SSH, Browser-Based Web Installer & Fortress Provisioner for NextPHP and Nexus Applications on cPanel Shared Hosting.**
+> **Zero-SSH, Browser-Based Web Installer & Fortress Provisioner for Nexus Applications on cPanel Shared Hosting.**
 
 [![PHP Version](https://img.shields.io/badge/PHP-8.2%2B-blue.svg)](https://php.net)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -13,7 +13,7 @@
 
 Deploying PHP applications on shared cPanel hosting is frequently hindered by lack of SSH shell access, terminal execution restrictions, and manual configuration errors in `.env` files. 
 
-**`nextphp/cpanel-installer`** eliminates terminal dependencies entirely. When installed in any NextPHP / Nexus application, it automatically intercepts unconfigured traffic at the front-controller layer and presents a reactive, Shadcn-styled browser setup wizard. 
+**`nexus/cpanel-installer`** eliminates terminal dependencies entirely. When installed in any Nexus application, it automatically intercepts unconfigured traffic at the front-controller layer and presents a reactive, Shadcn-styled browser setup wizard. 
 
 Once the customer enters their database credentials and admin details, the engine:
 1. Tests database connectivity in real time.
@@ -30,16 +30,16 @@ Once the customer enters their database credentials and admin details, the engin
 
 ### Option 1: Via Composer (Development / CLI)
 
-In your NextPHP or Nexus project root:
+In your Nexus project root:
 
 ```bash
-composer require nextphp/cpanel-installer
+composer require nexus-lab/cpanel-installer
 ```
 
 ### Option 2: Pre-Packaged Production ZIP (Zero-SSH Client Deployment)
 
 For clients on shared hosting without Composer or SSH access:
-1. Package the application using `php bin/nextphp build:cpanel`.
+1. Package the application using `php nexus build:cpanel`.
 2. Upload the generated `dist/nexus-cpanel-production.zip` to cPanel **File Manager** inside `public_html`.
 3. Click **Extract**.
 4. Open your browser and navigate to your domain: `https://example.com/`.

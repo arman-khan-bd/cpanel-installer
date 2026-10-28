@@ -1,6 +1,6 @@
 <?php
 /**
- * NextPHP / Nexus cPanel Web Setup Wizard
+ * Nexus cPanel Web Setup Wizard
  *
  * Shadcn UI inspired, reactive zero-SSH setup wizard.
  *
@@ -14,7 +14,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NextPHP Setup Wizard &bull; cPanel Zero-SSH Installer</title>
+    <title>Nexus Setup Wizard &bull; cPanel Zero-SSH Installer</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -380,7 +380,7 @@
                 </div>
                 <h2 class="text-2xl font-bold text-white mb-2">Installation Complete!</h2>
                 <p class="text-sm text-slate-400 max-w-md mx-auto mb-4">
-                    NextPHP has been installed successfully. Your database schema is provisioned, 256-bit Libsodium encryption key generated, and the security lockfile is armed.
+                    Nexus has been installed successfully. Your database schema is provisioned, 256-bit Libsodium encryption key generated, and the security lockfile is armed.
                 </p>
 
                 <p class="text-xs text-blue-400 font-semibold mb-6 flex items-center justify-center gap-1.5">
@@ -416,7 +416,7 @@
 
         <!-- Footer Notice -->
         <div class="text-center mt-6 text-xs text-slate-500">
-            NextPHP cPanel Installer &bull; Libsodium 256-Bit Engine &bull; Zero-SSH Compatible
+            Nexus cPanel Installer &bull; Libsodium 256-Bit Engine &bull; Zero-SSH Compatible
         </div>
 
     </div>
