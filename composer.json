@@ -22,7 +22,8 @@
         "php": "^8.2",
         "ext-pdo": "*",
         "ext-sodium": "*",
-        "ext-json": "*"
+        "ext-json": "*",
+        "nexus-lab/nexus": "^1.0 || ^2.0"
     },
     "suggest": {
         "ext-pdo_mysql": "Required to connect to cPanel MySQL and MariaDB databases",
