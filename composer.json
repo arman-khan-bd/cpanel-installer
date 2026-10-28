@@ -21,10 +21,10 @@
     "require": {
         "php": "^8.2",
         "ext-pdo": "*",
-        "ext-json": "*",
-        "nexus-lab/nexus": "^1.0 || ^2.0"
+        "ext-json": "*"
     },
     "suggest": {
+        "nexus-lab/nexus": "Install the full Nexus Shield micro-framework boilerplate via composer create-project nexus-lab/nexus",
         "ext-sodium": "Recommended for native Libsodium cryptographic operations (XChaCha20-Poly1305)",
         "ext-pdo_mysql": "Required to connect to cPanel MySQL and MariaDB databases",
         "ext-openssl": "Fallback cryptographic engine when native sodium is restricted",
