@@ -1,0 +1,60 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+/**
+ * NextPHP cPanel Installer CLI
+ * Zero-SSH & terminal bootstrap runner.
+ */
+
+$autoloadPaths = [
+    dirname(__DIR__) . '/vendor/autoload.php',
+    dirname(__DIR__, 3) . '/vendor/autoload.php',
+    dirname(__DIR__, 4) . '/vendor/autoload.php',
+];
+
+$loaded = false;
+foreach ($autoloadPaths as $path) {
+    if (file_exists($path)) {
+        require_once $path;
+        $loaded = true;
+        break;
+    }
+}
+
+if (!$loaded) {
+    spl_autoload_register(function (string $class) {
+        $prefix = 'NextPHP\\Installer\\';
+        $baseDir = dirname(__DIR__) . '/src/';
+        $len = strlen($prefix);
+        if (strncmp($prefix, $class, $len) === 0) {
+            $relative = substr($class, $len);
+            $file = $baseDir . str_replace('\\', '/', $relative) . '.php';
+            if (file_exists($file)) {
+                require_once $file;
+            }
+        }
+    });
+}
+
+$baseDir = getcwd() ?: dirname(__DIR__, 3);
+$installer = new \NextPHP\Installer\Installer($baseDir);
+
+if ($installer->isInstalled()) {
+    echo "\033[1;33m[NextPHP Installer]\033[0m Application is already installed.\n";
+    echo "Lockfile present at: {$baseDir}/.installed\n";
+    exit(0);
+}
+
+$prereqs = $installer->checkPrerequisites();
+if (!$prereqs['can_install']) {
+    echo "\033[1;31m[ERROR]\033[0m System prerequisites check failed. Please resolve the following:\n";
+    foreach ($prereqs['errors'] as $err) {
+        echo "  - {$err}\n";
+    }
+    exit(1);
+}
+
+echo "\033[1;32m[OK]\033[0m System prerequisites passed. Please access the web installer in your browser.\n";
+exit(0);

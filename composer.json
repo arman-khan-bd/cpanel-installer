@@ -1,0 +1,53 @@
+{
+    "name": "nextphp/cpanel-installer",
+    "description": "Zero-SSH graphical web installer for NextPHP and Nexus applications on cPanel shared hosting.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "nextphp",
+        "cpanel",
+        "installer",
+        "zero-ssh",
+        "shared-hosting",
+        "setup-wizard"
+    ],
+    "authors": [
+        {
+            "name": "NextPHP Architecture Team",
+            "role": "Package Architect & Application Security"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "ext-pdo": "*",
+        "ext-sodium": "*",
+        "ext-json": "*"
+    },
+    "suggest": {
+        "ext-pdo_mysql": "Required to connect to cPanel MySQL and MariaDB databases",
+        "ext-openssl": "Fallback cryptographic engine when native sodium is restricted",
+        "ext-mbstring": "Recommended for full Unicode and multibyte support",
+        "ext-fileinfo": "Required for upload MIME inspection"
+    },
+    "autoload": {
+        "psr-4": {
+            "NextPHP\\Installer\\": "src/"
+        }
+    },
+    "bin": [
+        "bin/cpanel-installer"
+    ],
+    "extra": {
+        "nextphp": {
+            "providers": [
+                "NextPHP\\Installer\\InstallerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
