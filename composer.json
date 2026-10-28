@@ -1,5 +1,5 @@
 {
-    "name": "nextphp/cpanel-installer",
+    "name": "nexus-lab/cpanel-installer",
     "description": "Zero-SSH graphical web installer for NextPHP and Nexus applications on cPanel shared hosting.",
     "type": "library",
     "license": "MIT",
